@@ -1,0 +1,49 @@
+ {% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %} Home {% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   {% load static  %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %} ">
+
+</head>
+<body>
+
+    {% block navbar %}
+        {% include 'partials/_navbar.html' %}
+    {% endblock %}
+
+
+    <div class="hero-image" >
+      <div class="hero-text">
+        <h1>{% block header %}Welcome {% endblock %}</h1><br><br>
+        <p>
+          {% block content %}
+              Programmers by nature are crafty problem solvers but they are no more unique than any other engineering positions outside of software industry.
+
+        What we do focus on or work on may be different from other types of engineering positions. We may be more focused on design patterns, algorithm efficiency, and our time may be pulled into debugging and diagnosing nasty memory leaks.
+
+Furthermore, we may be more focused on making our code more modular, and more re-usable in the future. The more code we write, in theory, we should be more efficient in our work, because we should be able to separate re-usable code into its own library, for later use in other projects.
+    <br><br><i>Why coding is intresting?</i> <br>
+              Computers run on binary code, which means that their software is written using only 1s and 0s. Learning coding has stunning cognitive-related benefits, such as problem-solving, computational thinking, analytical thinking, creative thinking, leadership-related skills, and even teamwor
+          {% endblock %}
+        </p><br><br>
+
+      </div>
+    </div>
+
+
+
+  {% block footer %}
+        {% include 'partials/_footer.html' %}
+  {% endblock %}
+
+</body>
+</html>

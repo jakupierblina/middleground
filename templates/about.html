@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+
+{% block header %} About MiddleGround {% endblock %}
+
+ {% block content %}
+      <div class="row">
+          <div class="col-sm-4">
+              {% load static %}
+              <img src="{% static 'img/olaf1.gif' %}" alt="My image">
+          </div>
+          <div class="col-sm-8">
+              <p> Middle Ground as the name has the right point meaning! We just want to be a stand point or area midway between extreeme or opposing positions. <br><br>
+                  With this project we just want to help others "struggling" understanding the concept for developing and building softwares in simple and clean code.
+                  <br>By making youtube videos, sharing projects code in different platforms we think we can help each other grow and become efficent not just monkey coding.
+                  You can follow us in any social platform or write us a direct email at middlegroundinf@gmail.com.
+                We look forward hearing from you :)
+              </p>
+
+              </p>
+          </div>
+      </div>
+
+
+{% endblock %}
